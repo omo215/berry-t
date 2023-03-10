@@ -3,7 +3,7 @@ name: deploy to xserver
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   deploy:
