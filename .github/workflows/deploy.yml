@@ -14,7 +14,7 @@ jobs:
           uses: burnett01/rsync-deployments@5.2.1
           with:
             switches: -avz --delete
-            path: dist/
+            path: src/
             remote_path: ${{ secrets.REMOTE_PATH }} #remote_path: /home/サーバーID/ドメイン名/public_html/
             remote_host: ${{ secrets.REMOTE_HOST }} #remote_host: サーバー番号.xserver.jp
             remote_user: ${{ secrets.REMOTE_USER }} #remote_user: ユーザー名
