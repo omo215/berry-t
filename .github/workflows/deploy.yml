@@ -10,18 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - uses: actions/checkout@v2
-        - uses: borales/actions-yarn@v4.2.0
-          with:
-            cmd: install
-        - uses: borales/actions-yarn@v4.2.0
-          with:
-            cmd: build
-        - name: ssh key generate
-          run: echo "$SSH_PRIVATE_KEY" > key && chmod 600 key
-          env:
-            SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         - name: rsync deployments
-          uses: burnett01/rsync-deployments@5.1
+          uses: burnett01/rsync-deployments@5.2.1
           with:
             switches: -avz --delete
             path: dist/
