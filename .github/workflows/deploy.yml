@@ -9,14 +9,14 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-        - uses: actions/checkout@v2
-        - name: rsync deployments
-          uses: burnett01/rsync-deployments@5.2.1
-          with:
-            switches: -avz --delete
-            path: src/
-            remote_path: ${{ secrets.REMOTE_PATH }} #remote_path: /home/サーバーID/ドメイン名/public_html/
-            remote_host: ${{ secrets.REMOTE_HOST }} #remote_host: サーバー番号.xserver.jp
-            remote_user: ${{ secrets.REMOTE_USER }} #remote_user: ユーザー名
-            remote_port: ${{ secrets.REMOTE_PORT }}
-            remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
+    - uses: actions/checkout@v2
+    - name: rsync deployments
+      uses: burnett01/rsync-deployments@5.2.1
+      with:
+        switches: -avzr --delete
+        path: src/
+        remote_path: ${{ secrets.DEPLOY_PATH }}
+        remote_host: ${{ secrets.DEPLOY_HOST }}
+        remote_port: ${{ secrets.DEPLOY_PORT }}
+        remote_user: ${{ secrets.DEPLOY_USER }}
+        remote_key: ${{ secrets.DEPLOY_KEY }}
