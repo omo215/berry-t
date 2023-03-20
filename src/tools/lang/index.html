@@ -4,8 +4,14 @@
         <meta charset="UTF-8">
         <title>Berry-T</title>
         <link rel="styleseet" href="./css/main.css" />
+        <script src="./js/lang.js"></script>
     </head>
     <body>
+        <nav>
+            <button id="jp_other_button">日本語から変換</button>
+            <button id="other_jp_button">その他から変換</button>
+        </nav>
+        <div id="jp_other_content">
         <div>
             日本語から変換
             <textarea></textarea>
@@ -27,6 +33,23 @@
             <button>変換</button>
         </div>
         <div>
+            日本語に戻す
+            <textarea></textarea>
         </div>
+    </div>
+    <div id="other_jp_content">
+        <div>
+        言語の選択
+        <select>
+
+        </select>
+        <textarea></textarea>
+        <button>変換</button>
+        </div>
+        <div>
+            日本語
+            <textarea></textarea>
+        </div>
+    </div>
     </body>
 </html>
