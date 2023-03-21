@@ -1,4 +1,4 @@
-console.log(start)
+console.log('start')
 document.getElementById('JO_JP_button').addEventListener('click', function (e) {
-    console.log(start)
+    console.log(e)
 })
