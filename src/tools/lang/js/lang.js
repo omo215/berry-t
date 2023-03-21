@@ -1,5 +1,6 @@
 eruda.init()
 console.log('start')
-document.getElementById('JO_JP_button').addEventListener('click', function (e) {
+const jaButton = document.getElementById('JO_JP_button')
+jaButton.addEventListener('click', function (e) {
     console.log(e)
 })
