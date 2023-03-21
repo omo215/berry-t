@@ -1,3 +1,3 @@
-function test(lang){
+function langChange(lang){
     console.log(lang)
 }
