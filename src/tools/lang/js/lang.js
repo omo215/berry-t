@@ -1,23 +1,25 @@
 const API_KEY = "ec69e56b-58f0-d83e-397a-7c54fa95c196:fx";
 const API_URL = "https://api-free.deepl.com/v2/translate";
 
-async function langChange(from_id,to_id, from, to) {
+async function langChange(from_id, to_id, from, to) {
   const entext = document.getElementById(from_id).value;
 
   let content = encodeURI(
     "auth_key=" +
-      API_KEY +
-      "&text=" +
-      entext +
-      "&source_lang=" +
-      from +
-      "&target_lang=" +
-      to
+    API_KEY +
+    "&text=" +
+    entext +
+    "&source_lang=" +
+    from +
+    "&target_lang=" +
+    to
   );
   let url = API_URL + "?" + content;
   const res = await fetch(url);
-  const val = res.json();
+  const val = await res.json();
   document.getElementById(to_id).value = val["translations"][0]["text"];
+
+  return 0
 }
 //   fetch(url)
 //     .then(function (response) {
@@ -34,11 +36,12 @@ async function langChange(from_id,to_id, from, to) {
 //     .catch(function (error) {
 //       document.getElementById("JO_EN_text").value = error.message;
 //     });
-function fromJA(){
-    langChange('JO_JP_text','JO_EN_text','JA','EN')
-    langChange('JO_JP_text','JO_PT_text','JA','PT')
-    langChange('JO_JP_text','JO_ID_text','JA','ID')
-    
+async function fromJA() {
+  const je = langChange('JO_JP_text', 'JO_EN_text', 'JA', 'EN')
+  
+  const jp = langChange('JO_JP_text', 'JO_PT_text', 'JA', 'PT')
+  const ji = langChange('JO_JP_text', 'JO_ID_text', 'JA', 'ID')
+
 }
 
 // BG - Bulgarian

@@ -1,59 +1,60 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Berry-T</title>
-        <script>eruda.init()</script>
-        <link rel="styleseet" href="./css/main.css" />
-        <script src="./js/lang.js"></script>
-    </head>
-    <body>
-        <div></div>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Berry-T</title>
+    <script>eruda.init()</script>
+    <link rel="styleseet" href="./css/lang.css" />
+    <script src="./js/lang.js"></script>
+</head>
+
+<body>
+    <div id="wrapper">
         <nav>
             <button id="jp_other_button">日本語から変換</button>
             <button id="other_jp_button">その他から変換</button>
         </nav>
         <div id="jp_other_content">
-        <div>
-            日本語から変換
-            <textarea id="JO_JP_text"></textarea>
-            <button id="JO_JP_button" onclick="fromJA()">変換</button>
+            <div>
+                日本語から変換
+                <textarea id="JO_JP_text"></textarea>
+                <button id="JO_JP_button" onclick="fromJA()">変換</button>
+            </div>
+            <div>
+                英語
+                <textarea id="JO_EN_text"></textarea>
+                <button>変換</button>
+                <textarea id="JO_EN_JP_text"></textarea>
+            </div>
+            <div>
+                ポルトガル語
+                <textarea id="JO_PT_text"></textarea>
+                <button>変換</button>
+                <textarea id="JO_PT_JP_text"></textarea>
+            </div>
+            <div>
+                インドネシア語
+                <textarea id="JO_ID_text"></textarea>
+                <button>変換</button>
+                <textarea id="JO_ID_JP_text"></textarea>
+            </div>
         </div>
-        <div>
-            英語
-            <textarea id="JO_EN_text"></textarea>
-            <button>変換</button>
-            <textarea id="JO_EN_JP_text"></textarea>
-        </div>
-        <div>
-            ポルトガル語
-            <textarea id="JO_PT_text"></textarea>
-            <button>変換</button>
-        </div>
-        <div>
-            インドネシア語
-            <textarea id="JO_ID_text"></textarea>
-            <button>変換</button>
-        </div>
+        <div id="other_jp_content" style="display: none;">
+            <div>
+                言語の選択
+                <select>
 
-        <div>
-            日本語に戻す
-            <textarea></textarea>
+                </select>
+                <textarea></textarea>
+                <button>変換</button>
+            </div>
+            <div>
+                日本語
+                <textarea></textarea>
+            </div>
         </div>
     </div>
-    <div id="other_jp_content" style="display: none;">
-        <div>
-        言語の選択
-        <select>
+</body>
 
-        </select>
-        <textarea></textarea>
-        <button>変換</button>
-        </div>
-        <div>
-            日本語
-            <textarea></textarea>
-        </div>
-    </div>
-    </body>
 </html>
