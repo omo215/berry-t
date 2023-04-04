@@ -3,9 +3,11 @@ body{
 }
 
 #wrapper{
+    max-width: 500px;
 }
 
 .flex-y{
+
     display: flex;
     flex-flow: column;
 }
