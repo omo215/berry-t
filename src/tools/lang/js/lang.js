@@ -18,7 +18,7 @@ async function langChange(from_id, to_id, from, to) {
   const res = await fetch(url);
   const val = await res.json();
   document.getElementById(to_id).value = val["translations"][0]["text"];
-
+console.log(val)
   return 0
 }
 //   fetch(url)
