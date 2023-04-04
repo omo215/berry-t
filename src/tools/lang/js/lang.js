@@ -37,7 +37,7 @@ console.log(val)
 //       document.getElementById("JO_EN_text").value = error.message;
 //     });
 async function fromJA() {
-  const je = await langChange('JO_JP_text', '', 'JA', 'EN')
+  const je = await langChange('JO_JP_text', 'JO_EN_text', 'JA', 'EN')
   console.log(je4)
   if(je){langChange('JO_EN_text', 'JO_EN_JP_text', 'EN', 'JA')}
   const jp = await langChange('JO_JP_text', 'JO_PT_text', 'JA', 'PT')
