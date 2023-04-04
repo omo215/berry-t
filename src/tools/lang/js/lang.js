@@ -21,24 +21,9 @@ async function langChange(from_id, to_id, from, to) {
 console.log(val)
   return 0
 }
-//   fetch(url)
-//     .then(function (response) {
-//       if (response.ok) {
-//         return response.json();
-//       } else {
-//         throw new Error("Could not reach the API: " + response.statusText);
-//       }
-//     })
-//     .then(function (data) {
-//       document.getElementById("JO_EN_text").value =
-//         data["translations"][0]["text"];
-//     })
-//     .catch(function (error) {
-//       document.getElementById("JO_EN_text").value = error.message;
-//     });
+
 async function fromJA() {
   const je = await langChange('JO_JP_text', 'JO_EN_text', 'JA', 'EN')
-  console.log(je4)
   if(je){langChange('JO_EN_text', 'JO_EN_JP_text', 'EN', 'JA')}
   const jp = await langChange('JO_JP_text', 'JO_PT_text', 'JA', 'PT')
   if(jp){langChange('JO_PT_text', 'JO_PT_JP_text', 'PT', 'JA')}

@@ -1,5 +1,6 @@
 body{
     background-color: #121212;
+    color:#eeeeee
 }
 
 #wrapper{
@@ -11,3 +12,5 @@ body{
     display: flex;
     flex-flow: column;
 }
+
+button{height: 40px;}
