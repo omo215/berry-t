@@ -39,7 +39,7 @@ switch (lang) {
     case "PT":
       langChange('JO_PT_text', 'JO_PT_JP_text', 'PT', 'JA')
       break;
-      case "EN":
+      case "ID":
     langChange('JO_ID_text', 'JO_ID_JP_text', 'ID', 'JA')
     break;
   default:
