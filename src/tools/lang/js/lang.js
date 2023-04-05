@@ -18,7 +18,6 @@ async function langChange(from_id, to_id, from, to) {
   const res = await fetch(url);
   const val = await res.json();
   document.getElementById(to_id).value = val["translations"][0]["text"];
-console.log(val)
   return val
 }
 
@@ -29,6 +28,23 @@ async function fromJA() {
   if(jp){langChange('JO_PT_text', 'JO_PT_JP_text', 'PT', 'JA')}
   const ji = await langChange('JO_JP_text', 'JO_ID_text', 'JA', 'ID')
   if(ji){langChange('JO_ID_text', 'JO_ID_JP_text', 'ID', 'JA')}
+}
+
+async function toJA(lang){
+
+switch (lang) {
+  case "EN":
+    langChange('JO_EN_text', 'JO_EN_JP_text', 'EN', 'JA')
+    break;
+    case "PT":
+      langChange('JO_PT_text', 'JO_PT_JP_text', 'PT', 'JA')
+      break;
+      case "EN":
+    langChange('JO_ID_text', 'JO_ID_JP_text', 'ID', 'JA')
+    break;
+  default:
+    break;
+ }
 }
 
 // BG - Bulgarian
